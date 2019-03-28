@@ -1,5 +1,7 @@
 package com.alberto.pontointeligente.api.enums;
 
-public enum PerfilEnum {
 
+public enum PerfilEnum {
+	ROLE_ADMIN,
+	ROLE_USUARIO;
 }
