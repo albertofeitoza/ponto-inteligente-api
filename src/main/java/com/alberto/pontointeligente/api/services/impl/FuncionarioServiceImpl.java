@@ -6,11 +6,13 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.alberto.pontointeligente.api.entities.Funcionario;
 import com.alberto.pontointeligente.api.repositories.FuncionarioRepository;
 import com.alberto.pontointeligente.api.services.FuncionarioService;
 
+@Service
 public class FuncionarioServiceImpl implements FuncionarioService {
 
 	private static final Logger log = LoggerFactory.getLogger(FuncionarioServiceImpl.class);
