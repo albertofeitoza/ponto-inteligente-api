@@ -1,12 +1,15 @@
 package com.alberto.pontointeligente.api.dtos;
 
-import org.hibernate.validator.constraints.Email;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+
+//import org.hibernate.validator.constraints.NotEmpty;
+
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.br.CNPJ;
 import org.hibernate.validator.constraints.br.CPF;
 
-@SuppressWarnings("deprecation")
+
 public class CadastroPJDto {
 	
 	private Long id;
@@ -20,10 +23,11 @@ public class CadastroPJDto {
 	public CadastroPJDto() {
 	}
 
+	
 	public Long getId() {
 		return id;
 	}
-
+    
 	public void setId(Long id) {
 		this.id = id;
 	}

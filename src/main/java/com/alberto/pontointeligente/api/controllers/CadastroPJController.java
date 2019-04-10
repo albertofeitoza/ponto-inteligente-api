@@ -1,5 +1,6 @@
 package com.alberto.pontointeligente.api.controllers;
 import java.security.NoSuchAlgorithmException;
+
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
