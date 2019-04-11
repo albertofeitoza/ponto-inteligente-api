@@ -33,8 +33,6 @@ public class Empresa implements Serializable {
 	}
 
 	@Id
-    
-	//@GeneratedValue(strategy=GenerationType.AUTO)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
 	
