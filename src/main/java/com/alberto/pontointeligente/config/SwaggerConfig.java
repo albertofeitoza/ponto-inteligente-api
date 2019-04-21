@@ -28,8 +28,11 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo(){
-        return new ApiInfoBuilder().title("Swagger API").description("").version("1.0").build();
+        return new ApiInfoBuilder()
+        		.title("Swagger API")
+        		.description("")
+        		.version("1.0")
+        		.build();
     }
 
-	
 }

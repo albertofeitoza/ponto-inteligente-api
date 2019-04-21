@@ -13,7 +13,7 @@ public interface EmpresaService {
 	* Cadastrar uma empresa nova no Banco de dados
 	*
 	* @param empresa 
-	* @return Epresa	
+	* @return Empresa	
 	*/
 	Empresa persistir(Empresa empresa);
 }
