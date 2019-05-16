@@ -1,3 +1,17 @@
+Gerar o Token 
+POST
+http://localhost:8089/auth
+{
+  	"email":"kellycristina.golden@gmail.com",
+  	"senha":"123456"
+}
+
+
+
+-------------------------------------
+
+
+
 POST
 http://localhost:8089/api/cadastrar-pj
 {
@@ -51,4 +65,31 @@ http://localhost:8089/api/empresas/cnpj/6032273300014
     "message": "Unauthorized",
     "path": "/api/empresas/cnpj/6032273300014"
 }
-	
+
+
+
+ERROS
+------------------------------------------------------------------------------------------------------
+2019-05-16 08:25:20.876 ERROR 7147 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Field authenticationManager in com.alberto.pontointeligente.api.security.controllers.AuthenticationController required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+SOLUÇÃO:
+
+Adicionar o Bean na classe  WebSecurityConfig
+dentro do Pacote 'com.alberto.pontointeligente.api.security.config'
+
+ @Bean
+    public AuthenticationManager customAuthenticationManager() throws Exception {
+      return authenticationManager();
+    }
+------------------------------------------------------------------------------------------------------

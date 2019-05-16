@@ -26,6 +26,7 @@ import com.alberto.pontointeligente.api.response.Response;
 import com.alberto.pontointeligente.api.services.EmpresaService;
 import com.alberto.pontointeligente.api.services.FuncionarioService;
 //import com.alberto.pontointeligente.api.utils.PasswordUtils;
+import com.alberto.pontointeligente.api.utils.PasswordUtils;
 
 @RestController
 @RequestMapping("/api/cadastrar-pf")
@@ -108,8 +109,8 @@ public class CadastroPFController {
 		funcionario.setEmail(cadastroPFDto.getEmail());
 		funcionario.setCpf(cadastroPFDto.getCpf());
 		funcionario.setPerfil(PerfilEnum.ROLE_USUARIO);
-		funcionario.setSenha("123456"); //(PasswordUtils.gerarBCrypt(cadastroPFDto.getSenha()));
-		//PasswordUtils.gerarBycript(cadastroPFDto.getSenha());
+		//funcionario.setSenha("123456"); //(PasswordUtils.gerarBCrypt(cadastroPFDto.getSenha()));
+		funcionario.setSenha(PasswordUtils.gerarBycript(cadastroPFDto.getSenha()));
 		cadastroPFDto.getQtdHorasAlmoco()
 				.ifPresent(qtdHorasAlmoco -> funcionario.setQtdHorasAlmoco(Float.valueOf(qtdHorasAlmoco)));
 		cadastroPFDto.getQtdHorasTrabalhoDia()
