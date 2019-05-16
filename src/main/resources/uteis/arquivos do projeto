@@ -1,0 +1,54 @@
+POST
+http://localhost:8089/api/cadastrar-pj
+{
+	"nome": "Alberto Feitoza",
+	"email" : "alberto.feitoza@outlook.com",
+	"senha" : "123456",
+	"cpf" : "27455363893",
+	"razaoSocial": "Alberto IT",
+	"cnpj" : "60322733000174"
+}
+
+
+POST
+http://localhost:8089/api/cadastrar-pf
+
+{
+   "nome" : "kelly",
+   "email":"kellycristina.golden@gmail.com",
+   "senha":"123456", 
+   "cpf":"29604998838",
+   "ValorHora":"50",
+   "cnpj":"60322733000174"
+}
+
+PUT
+http://localhost:8089/api/funcionarios/3
+{
+   "nome" : "Fulano de tal Hoje",
+   "valorHora": "70",
+   "email": "fulano@teste2.com",
+   "qtdHorasTrabalhoDia":"9.0",
+   "cnpj":"60322733000174"
+}
+
+POST
+http://localhost:8089/api/lancamentos
+{
+	"data": "2019-04-01 09:00:00",
+	"tipo": "INICIO_TRABALHO",
+	"descricao": "inicio de trabalho",
+	"localizacao":"1.1231,1.12312",
+	"funcionarioId":"3"
+}
+
+GET
+http://localhost:8089/api/empresas/cnpj/6032273300014
+{
+    "timestamp": "2019-05-16T09:21:05.493+0000",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "Unauthorized",
+    "path": "/api/empresas/cnpj/6032273300014"
+}
+	
