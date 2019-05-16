@@ -55,6 +55,7 @@ public class FuncionarioController {
 		Response<FuncionarioDto> response = new Response<FuncionarioDto>();
 
 		Optional<Funcionario> funcionario = this.funcionarioService.buscarPorId(id);
+		
 		if (!funcionario.isPresent()) {
 			result.addError(new ObjectError("funcionario", "Funcionário não encontrado."));
 		}
