@@ -6,11 +6,7 @@ http://localhost:8089/auth
   	"senha":"123456"
 }
 
-
-
 -------------------------------------
-
-
 
 POST
 http://localhost:8089/api/cadastrar-pj

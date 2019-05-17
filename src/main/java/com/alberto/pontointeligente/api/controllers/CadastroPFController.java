@@ -109,7 +109,6 @@ public class CadastroPFController {
 		funcionario.setEmail(cadastroPFDto.getEmail());
 		funcionario.setCpf(cadastroPFDto.getCpf());
 		funcionario.setPerfil(PerfilEnum.ROLE_USUARIO);
-		//funcionario.setSenha("123456"); //(PasswordUtils.gerarBCrypt(cadastroPFDto.getSenha()));
 		funcionario.setSenha(PasswordUtils.gerarBycript(cadastroPFDto.getSenha()));
 		cadastroPFDto.getQtdHorasAlmoco()
 				.ifPresent(qtdHorasAlmoco -> funcionario.setQtdHorasAlmoco(Float.valueOf(qtdHorasAlmoco)));
