@@ -23,6 +23,7 @@ import com.alberto.pontointeligente.api.response.Response;
 import com.alberto.pontointeligente.api.services.EmpresaService;
 import com.alberto.pontointeligente.api.services.FuncionarioService;
 //import com.alberto.pontointeligente.api.utils.PasswordUtils;
+import com.alberto.pontointeligente.api.utils.PasswordUtils;
 
 @RestController
 @RequestMapping("/api/cadastrar-pj")
@@ -118,7 +119,7 @@ public class CadastroPJController {
 		funcionario.setEmail(cadastroPJDto.getEmail());
 		funcionario.setCpf(cadastroPJDto.getCpf());
 		funcionario.setPerfil(PerfilEnum.ROLE_ADMIN);
-		funcionario.setSenha("123456"); //PasswordUtils.gerarBCrypt(cadastroPJDto.getSenha()));
+		funcionario.setSenha(PasswordUtils.gerarBycript(cadastroPJDto.getSenha()));
 
 		return funcionario;
 	}
